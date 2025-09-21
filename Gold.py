@@ -58,7 +58,7 @@ def identify_trend(data):
 
 # Updated Function to Send Telegram Alerts to fixed user and channel
 def send_telegram_message(message):
-    recipients = [{USER_ID},CHANNEL_ID]
+    recipients = ["USER_ID",CHANNEL_ID]
     for chat_id in recipients:
         url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
         payload = {
