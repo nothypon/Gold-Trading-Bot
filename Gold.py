@@ -8,6 +8,8 @@ import math
 
 # Telegram Bot Token from environment
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+USER_ID = os.getenv("USER_ID")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
 
 # Forex Pairs to Monitor
 FOREX_PAIRS = ["GCU25.CMX"]
@@ -56,7 +58,7 @@ def identify_trend(data):
 
 # Updated Function to Send Telegram Alerts to fixed user and channel
 def send_telegram_message(message):
-    recipients = ["1080336066","-1002619198712"]
+    recipients = [USER_ID,CHANNEL_ID]
     for chat_id in recipients:
         url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
         payload = {
