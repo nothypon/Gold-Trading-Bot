@@ -48,12 +48,12 @@ def calculate_fibonacci_levels(data):
 # Function to Identify Trend & Breakouts
 def identify_trend(data):
     data = data.copy()
-    data['EMA_20'] = data['Close'].rolling(window=20).mean()
+    data['SMA_20'] = data['Close'].rolling(window=20).mean()
 
-    if data['EMA_20'].isna().all():
+    if data['SMA_20'].isna().all():
         return None
 
-    breakout = data['Close'].iloc[-1] > data['EMA_20'].iloc[-1]
+    breakout = data['Close'].iloc[-1] > data['SMA_20'].iloc[-1]
     return breakout
 
 # Updated Function to Send Telegram Alerts to fixed user and channel
@@ -89,6 +89,7 @@ def run_forex_strategy():
             print(f"[🔢] Fibonacci Levels: {fib_levels}")
             print(f"[🧐] Near 25% Retracement: {near_25_percent}")
             print(f"[🧐] Near 75% Retracement: {near_75_percent}")
+			print(f"{USER_ID}")
 
             friendly_name = PAIR_NAMES.get(pair, pair)
 
