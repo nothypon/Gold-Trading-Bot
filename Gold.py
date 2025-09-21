@@ -88,8 +88,7 @@ def run_forex_strategy():
             print(f"[📈] Breakout: {breakout}")
             print(f"[🔢] Fibonacci Levels: {fib_levels}")
             print(f"[🧐] Near 25% Retracement: {near_25_percent}")
-            print(f"[🧐] Near 75% Retracement: {near_75_percent}")
-			print(f"{USER_ID}")
+            print(f"[🧐] Near 75% Retracement: {near_75_percent} and {USER_ID}")
 
             friendly_name = PAIR_NAMES.get(pair, pair)
 
