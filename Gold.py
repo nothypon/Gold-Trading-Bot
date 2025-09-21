@@ -12,11 +12,11 @@ USER_ID = os.getenv("USER_ID")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
 
 # Forex Pairs to Monitor
-FOREX_PAIRS = ["GCU25.CMX"]
+FOREX_PAIRS = ["GCX25.CMX"]
 
 # Mapping of symbols to real names
 PAIR_NAMES = {
-    "GCU25.CMX": "#XAUUSD" 
+    "GCX25.CMX": "#XAUUSD" 
 }
 
 # Function to Fetch Forex Data from Yahoo Finance
